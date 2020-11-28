@@ -7,7 +7,7 @@ function display(json){
 }
 
 window.addEventListener("load", () => { 
-    fetch('/feed/fetch')
+    fetch('/fetch')
     .then(res => res.json())
     .then(data => {
         display(data.avengers);
@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
 }) 
 
 function submission(){
-fetch('/feed/insert', {
+fetch('/insert', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({name: document.getElementById("name").value}) 
